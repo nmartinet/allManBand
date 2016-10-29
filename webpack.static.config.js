@@ -1,6 +1,9 @@
 //webpack.static.config.js
 const webpack = require('webpack');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
+
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 var ejs = require('ejs');
 var fs = require('fs');
 
@@ -21,6 +24,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: 'docs',
+    publicPath: '/assets',
     libraryTarget: 'umd'
   },
   module: {
@@ -44,11 +48,9 @@ module.exports = {
         loader: "url-loader?limit=10000&mimetype=application/font-woff2&name=[path][name].[ext]"
       },
       {
-        test: /\.(eot|ttf|svg|gif|png)$/,
-        loader: "file-loader"
-      },
-      { test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/, loader: "file" }
- 
+        test: /\.(eot|ttf|svg|gif|png|jpg)$/,
+        loader: "ignore-loader"
+      }
     ]
   },
 
@@ -67,8 +69,11 @@ module.exports = {
     new webpack.DefinePlugin({
     'process.env': {
       'NODE_ENV': JSON.stringify('production')
-    }
-  })
+      },
+    }),
+    new CopyWebpackPlugin([
+      {from: 'public'}
+    ])
   ]
 
 }

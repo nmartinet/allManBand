@@ -77,8 +77,6 @@ h1, h2, h3 {
     height: auto;
   }
 
-
-
   background-image: url('/img/header-bg-big.jpg');
   background-size: cover;
 
@@ -227,6 +225,26 @@ section {
     h2 {
       font-size: 3em;
     }
+  }
+}
+
+#tagline {
+  header {
+  background-color: $c5;
+  padding: 20px 20px 20px 20px;
+  border-radius: 100px;
+  margin: 0 10px 0 10px;
+
+
+  }
+
+
+  h2 {
+    line-height: 1em;
+    color: $c4;
+    font-size: 4em;
+    -webkit-text-stroke: 3px $c5;
+    text-shadow: 6px 6px rgba(black, 0.5);
   }
 }
 

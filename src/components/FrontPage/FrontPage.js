@@ -1,27 +1,13 @@
 import React from 'react';
 
-import NavBar   from './navbar';
-import Landing  from './landing';
-import About    from './about';
-import Services from './services';
-import Contact  from './contact';
-import Footer   from './footer';
-
-import data from './data'
-
-
 class FrontPage extends React.Component {
   render() {
-    let lang = this.props.params.lang || 'en';
-
-    let currData = data[lang];
-
     return (
       <div>{/*main*/}
         <div id="header">
           <div className="title">
             <header className="container">
-              <h1>The <span className="cap">all</span> man <br/> brothers rock band</h1>
+              <h1><span className="cap">all-man</span><br/> brothers</h1>
               <div className="subHead">
                 are
               </div>
@@ -69,6 +55,12 @@ class FrontPage extends React.Component {
             <div id="content-border2">
               <div className="inner-content">
                 <div className="container inside">
+                  <section id="tagline">
+                    <header>
+                      <h2> A funk rock <br/><span className="cap">experience</span></h2>
+                    </header>
+                  </section>
+
                   <section id="upcoming">
                     <header>
                       <h2>Upcoming shows</h2>
