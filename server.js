@@ -48,7 +48,7 @@ app.get('*', function response(req, res) {
       const html = renderToString(<RouterContext {...renderProps} />);
       res.render('template', {outlet: html});
     } else {
-      res.sendFile(__dirname + 'public' + req.url);
+      res.status(404).send('not found')
     }
   })
 

@@ -181,6 +181,7 @@ h1, h2, h3 {
 
 section {
   padding-bottom: 40px;
+  font-size: 1rem;
 
   @media screen and (max-width: 975px) {
     font-size: 0.75rem;
@@ -304,6 +305,7 @@ section {
       }
 
       .desc {
+        font-size: 1em;
         padding: 5px 20px 10px 20px;
       }
     }

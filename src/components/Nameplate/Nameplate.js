@@ -1,5 +1,7 @@
 import React from 'react';
-import style from './style.scss';
+if (process.env.BROWSER) {
+  require('./style.scss');
+}
 
 class Nameplate extends React.Component {
   render() {

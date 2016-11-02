@@ -43,7 +43,12 @@ const config = {
   },
   plugins: [
       new webpack.optimize.OccurenceOrderPlugin(),
-      new webpack.HotModuleReplacementPlugin()
+      new webpack.HotModuleReplacementPlugin(),
+      new webpack.DefinePlugin({
+        "process.env": {
+            BROWSER: JSON.stringify(true)
+        }
+    })
   ]
 }
 
