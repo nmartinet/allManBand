@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Nameplate from '../Nameplate/Nameplate';
+
 class FrontPage extends React.Component {
   render() {
     return (
@@ -13,38 +15,11 @@ class FrontPage extends React.Component {
               </div>
 
               <div className="members">
+                <Nameplate name="Sando"  instrument="guitar" />
+                <Nameplate name="Mango"  instrument="keyboards" />
+                <Nameplate name="Tito"   instrument="bass" />
+                <Nameplate name="Matsov" instrument="drums" />
 
-                <div className="member">
-                  <div className="instrument guitar">
-                  </div>
-                  <div className="name">
-                    Sando
-                  </div>
-                </div>
-
-                <div className="member">
-                  <div className="instrument keyboards">
-                  </div>
-                  <div className="name">
-                    Mango
-                  </div>
-                </div>
-
-                <div className="member">
-                  <div className="instrument bass">
-                  </div>
-                  <div className="name">
-                    Tito
-                  </div>
-                </div>
-
-                <div className="member">
-                  <div className="instrument drums">
-                  </div>
-                  <div className="name">
-                    Matsov
-                  </div>
-                </div>
               </div>
             </header>
           </div>
@@ -54,14 +29,14 @@ class FrontPage extends React.Component {
           <div id="content-border1">
             <div id="content-border2">
               <div className="inner-content">
-                <div className="container inside">
+                <div className="inside">
                   <section id="tagline">
                     <header>
                       <h2> A funk rock <br/><span className="cap">experience</span></h2>
                     </header>
                   </section>
 
-                  <section id="upcoming">
+                  <section id="upcoming" className="container">
                     <header>
                       <h2>Upcoming shows</h2>
                     </header>
@@ -85,7 +60,7 @@ class FrontPage extends React.Component {
                       </div>
                   </section>
 
-                  <section id="social">
+                  <section id="social" className="container">
                     <header>
                       <h2>Social media</h2>
                     </header>

@@ -1,0 +1,49 @@
+@import "./../../style/constants.scss";
+ 
+.guitar{
+  background-image: url('./img/guitar.png');
+  background-size:cover;
+} 
+
+.bass{
+  background-image: url('./img/bass.png');
+  background-size:cover;
+}
+
+.drums{
+  background-image: url('./img/drums.png');
+  background-size:cover;
+}
+
+.keyboards{
+  background-image: url('./img/keyboards.png');
+  background-size:cover;
+}
+
+.member {
+  .instrument {
+    background-color: $c1;
+
+    margin: 0 auto;
+    height: 100px;
+    width: 100px;
+    
+    border-radius: 50px;
+    border: solid 5px $c5;
+  }
+
+  .name {
+    color: $c3;
+    -webkit-text-stroke: 2px $c5;
+    background-color: $c1;
+    text-align: center;
+    
+    width: 250px;
+    margin: 10px;
+    margin-top: -30px;
+    padding: 5px 25px 5px 25px;
+
+    border-radius: 20px;
+    border: solid 5px $c5;
+  }
+}

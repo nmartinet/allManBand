@@ -11,7 +11,7 @@ var template = ejs.compile(fs.readFileSync(__dirname + '/src/views/template.stat
 
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-var extractCSS = new ExtractTextPlugin('stylesheets/[name].css');
+var extractCSS = new ExtractTextPlugin('stylesheets/[name].css')
 
 const paths = [
   '/'
@@ -24,7 +24,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: 'docs',
-    publicPath: '/assets',
+    publicPath: '../',
     libraryTarget: 'umd'
   },
   module: {
@@ -49,7 +49,7 @@ module.exports = {
       },
       {
         test: /\.(eot|ttf|svg|gif|png|jpg)$/,
-        loader: "ignore-loader"
+        loader: "url-loader?limit=1"
       }
     ]
   },
@@ -70,10 +70,7 @@ module.exports = {
     'process.env': {
       'NODE_ENV': JSON.stringify('production')
       },
-    }),
-    new CopyWebpackPlugin([
-      {from: 'public'}
-    ])
+    })
   ]
 
 }

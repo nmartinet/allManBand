@@ -35,11 +35,9 @@ const config = {
       }, {
         test: /\.woff2$/,
         loader: "url-loader?limit=10000&mimetype=application/font-woff2&name=[path][name].[ext]"
-      }, {
-        test: /\.(eot|ttf|svg|gif|png)$/,
-        loader: "file-loader"
       },
-      { test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/, loader: "file" }
+      { test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/, 
+        loader: "url-loader?limit=10000" }
  
     ]
   },
