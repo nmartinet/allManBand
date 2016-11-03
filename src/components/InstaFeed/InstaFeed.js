@@ -19,9 +19,6 @@ const renderCaption = (text) => {
                 )
               })
   
-
-  console.log(arr)
-  
   return (
     <div className="picture-caption">
       {arr}
@@ -85,8 +82,6 @@ class PictureList extends React.Component {
         </div>
       )
     };
-     
-    console.log(this.state)
 
     return (
       <div className="picture-list">
