@@ -1,0 +1,67 @@
+@import "./../../style/constants.scss";
+
+.instagram-feed {
+
+  h3 {
+    font-size: 1.75em;
+    text-align: center;
+    margin-bottom: 30px;
+
+    a {
+      color: $c3;
+      text-decoration: none;
+
+      &:hover {
+        color: $c4;
+      }
+
+    }
+  }
+
+  .picture-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .picture {
+      margin: 10px;
+
+      width: 320px;
+
+      background-color: #eee;
+      border: 10px solid #eee;
+      
+      box-shadow: 3px 3px 3px #777;
+
+      -webkit-transform: rotate(-2deg);
+
+      &:nth-child(even) {
+        -webkit-transform: rotate(2deg);
+      }
+
+      &:nth-child(3n) {
+        -webkit-transform: rotate(5deg);
+      }
+
+       &:nth-child(5n) {
+        -webkit-transform: rotate(-4deg);
+      }
+
+
+
+
+      img {
+        margin: auto 0;      
+      }
+
+      .picture-caption {
+        padding: 10px;
+
+        a{
+          text-decoration: none;
+        }
+
+      }
+    }
+  }
+}

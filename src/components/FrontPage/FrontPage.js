@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Nameplate from '../Nameplate/Nameplate';
+import InstaFeed from '../InstaFeed/InstaFeed';
 
 class FrontPage extends React.Component {
   render() {
@@ -19,7 +20,6 @@ class FrontPage extends React.Component {
                 <Nameplate name="Mango"  instrument="keyboards" />
                 <Nameplate name="Tito"   instrument="bass" />
                 <Nameplate name="Matsov" instrument="drums" />
-
               </div>
             </header>
           </div>
@@ -60,6 +60,15 @@ class FrontPage extends React.Component {
                       </div>
                   </section>
 
+                  <section id="instagram-feed" className="container">
+                    <header>
+                      <h2>
+                      Instagram Feed
+                      </h2>
+                    </header>
+                    <InstaFeed />
+                  </section>
+
                   <section id="social" className="container">
                     <header>
                       <h2>Social media</h2>
@@ -68,13 +77,13 @@ class FrontPage extends React.Component {
                      <div className="media-list">
                       
                       <div>
-                        <a href="https://www.instagram.com/the.all.man.brothers.rock.band/">
+                        <a href="https://www.instagram.com/realmanbros/">
                           <i className="fa fa-instagram" aria-hidden="true"></i>
                         </a>
                       </div>
 
                       <div>
-                        <a href="https://twitter.com/TheALLmanBros">
+                        <a href="https://twitter.com/realManBros">
                           <i className="fa fa-twitter" aria-hidden="true"></i>
                         </a>
                       </div>
