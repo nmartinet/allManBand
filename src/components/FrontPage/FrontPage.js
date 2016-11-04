@@ -61,11 +61,6 @@ class FrontPage extends React.Component {
                   </section>
 
                   <section id="instagram-feed" className="container">
-                    <header>
-                      <h2>
-                      Instagram Feed
-                      </h2>
-                    </header>
                     <InstaFeed />
                   </section>
 
