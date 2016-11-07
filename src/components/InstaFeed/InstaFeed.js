@@ -6,17 +6,27 @@ if (process.env.BROWSER) require('./style.scss');
 
 const renderCaption = (text) => {
   var arr = text
-              .split(/(#?[a-zA-Z0-9 ]+)/)
+              .split(/([#@]?[a-zA-Z0-9]+)/)
               .filter((txt) => !(txt.length === 0))
               .map((txt) => {
-                if (txt[0] !== '#') return txt;
+                if (txt[0] === '#') {
+                  let tag = txt.substring(1);
+                  let url = `https://www.instagram.com/explore/tags/${tag}/`
 
-                let tag = txt.substring(1);
-                let url = `https://www.instagram.com/explore/tags/gremlinsbegone/`
+                  return (
+                    <a href={url}>{txt}</a>
+                  )
+                }
 
-                return (
-                  <a href={url}>{txt}</a>
-                )
+                if (txt[0] === '@') {
+                  let user = txt.substring(1);
+                  let url = `https://www.instagram.com/${user}/`
+
+                  return (
+                    <a href={url}>{txt}</a>
+                  )
+                }
+                return txt
               })
   
   return (
